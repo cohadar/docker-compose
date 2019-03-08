@@ -1,0 +1,11 @@
+version: '3'
+services:
+  kafka-a1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9092:9092"
+    volumes:
+      - "./data-a1:/data"
+      - "./conf-a1/:/etc/kafka/conf"
