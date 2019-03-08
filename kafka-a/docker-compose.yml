@@ -5,7 +5,25 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "9092:9092"
+      - "9091:9092"
     volumes:
       - "./data-a1:/data"
       - "./conf-a1/:/etc/kafka/conf"
+  kafka-a2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9092:9092"
+    volumes:
+      - "./data-a2:/data"
+      - "./conf-a2/:/etc/kafka/conf"
+  kafka-a3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9093:9092"
+    volumes:
+      - "./data-a3:/data"
+      - "./conf-a3/:/etc/kafka/conf"
