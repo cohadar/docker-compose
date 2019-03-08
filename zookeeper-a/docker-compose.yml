@@ -1,6 +1,6 @@
 version: '3'
 services:
-  zookeeper-a1:
+  zookeeper1.a.local:
     build:
       context: .
       dockerfile: Dockerfile
@@ -9,21 +9,21 @@ services:
     volumes:
       - "./data-a1:/data"
       - "./conf-a1/:/opt/zookeeper/conf"
-  zookeeper-a2:
+  zookeeper2.a.local:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "2182:2181"
+      - "2182:2182"
     volumes:
       - "./data-a2:/data"
       - "./conf-a2/:/opt/zookeeper/conf"
-  zookeeper-a3:
+  zookeeper3.a.local:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "2183:2181"
+      - "2183:2183"
     volumes:
       - "./data-a3:/data"
       - "./conf-a3/:/opt/zookeeper/conf"
