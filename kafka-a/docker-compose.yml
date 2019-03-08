@@ -1,15 +1,15 @@
 version: '3'
 services:
-  kafka-a1:
+  kafka1.a.local:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "9091:9092"
+      - "9091:9091"
     volumes:
       - "./data-a1:/data"
       - "./conf-a1/:/etc/kafka/conf"
-  kafka-a2:
+  kafka2.a.local:
     build:
       context: .
       dockerfile: Dockerfile
@@ -18,12 +18,12 @@ services:
     volumes:
       - "./data-a2:/data"
       - "./conf-a2/:/etc/kafka/conf"
-  kafka-a3:
+  kafka3.a.local:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "9093:9092"
+      - "9093:9093"
     volumes:
       - "./data-a3:/data"
       - "./conf-a3/:/etc/kafka/conf"
