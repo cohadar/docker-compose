@@ -45,4 +45,3 @@ services:
     volumes:
       - "./data-a5:/data"
       - "./conf-a5/:/opt/zookeeper/conf"
-
