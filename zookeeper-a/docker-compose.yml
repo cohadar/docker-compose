@@ -8,40 +8,51 @@ services:
       - "2181:2181"
     volumes:
       - "./data-a1:/data"
-      - "./conf-a1/:/opt/zookeeper/conf"
+      - "./conf/:/opt/zookeeper/conf"
+    environment:
+     - "SERVER_JVMFLAGS=-Xmx512m"
   zookeeper2.a.local:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "2182:2182"
+      - "2182:2181"
     volumes:
       - "./data-a2:/data"
-      - "./conf-a2/:/opt/zookeeper/conf"
+      - "./conf/:/opt/zookeeper/conf"
+    environment:
+     - "SERVER_JVMFLAGS=-Xmx512m"
   zookeeper3.a.local:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "2183:2183"
+      - "2183:2181"
     volumes:
       - "./data-a3:/data"
-      - "./conf-a3/:/opt/zookeeper/conf"
+      - "./conf/:/opt/zookeeper/conf"
+    environment:
+     - "SERVER_JVMFLAGS=-Xmx512m"
   zookeeper4.a.local:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "2184:2184"
+      - "2184:2181"
     volumes:
       - "./data-a4:/data"
-      - "./conf-a4/:/opt/zookeeper/conf"
+      - "./conf/:/opt/zookeeper/conf"
+    environment:
+     - "SERVER_JVMFLAGS=-Xmx512m"
   zookeeper5.a.local:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "2185:2185"
+      - "2185:2181"
     volumes:
       - "./data-a5:/data"
-      - "./conf-a5/:/opt/zookeeper/conf"
+      - "./conf/:/opt/zookeeper/conf"
+    environment:
+     - "SERVER_JVMFLAGS=-Xmx512m"
+
